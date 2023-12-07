@@ -1,0 +1,24 @@
+# syntax=docker/dockerfile:1
+
+FROM archlinux:base
+
+# Update system
+RUN pacman -Syu --noconfirm
+
+# Install essential packages
+RUN pacman -S --noconfirm sudo bash nano vim git curl
+
+# Create a new user and add to sudo group
+RUN useradd -m user \
+    && echo "user:password" | chpasswd \
+    && usermod -aG wheel user \
+    && echo 'user ALL=(ALL) NOPASSWD: ALL' > /etc/sudoers.d/user
+
+# Set working directory
+USER user
+WORKDIR /home/user
+
+# Copy files from current directory to the container
+COPY . .
+
+CMD ["/bin/bash"]

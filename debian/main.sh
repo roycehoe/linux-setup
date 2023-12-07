@@ -11,7 +11,8 @@ install_fonts() {
 
 
 setup_debian
-setup_fish
-setup_version_managers
-install_fonts
-setup_nvim
+# setup_fish
+# setup_version_managers
+# install_fonts
+# setup_nvim
+neofetch

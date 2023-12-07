@@ -1,17 +1,6 @@
 #!/bin/bash
 . ./utils.sh
-
-BASIC_PACKAGES=(
-  "sudo"
-  "locales"
-  "gcc"
-  "make"
-)
-
-UI_PACKAGES=(
-  "i3-wm"
-  "neofetch"
-)
+. ./constants.sh
 
 _install_fonts() {
   mkdir -p ~/.local/share/fonts
