@@ -36,6 +36,10 @@ function setup_debian() {
     install_apt_package_with_banner $package
   done
 
+  for package in ${WEB_DEV_PACKAGES[@]}; do
+    install_apt_package_with_banner $package
+  done
+
   _install_fonts
   _set_locale
 }

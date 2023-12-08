@@ -40,12 +40,7 @@ function _setup_poetry() {
   fish -c 'echo "set -U fish_user_paths $HOME/.local/bin $fish_user_paths" >> ~/.config/fish/config.fish'
 }
 
-function _setup_npm() {
-  install_apt_package_with_banner npm
-}
-
 function _setup_pnpm() {
-  fish -c "set -x SHELL (which fish)"
   fish -c "curl -fsSL https://get.pnpm.io/install.sh | sh -"
 }
 
@@ -91,7 +86,6 @@ function _setup_docker_and_docker_compose() {
 function setup_version_managers() {
   _setup_asdf
   _setup_poetry
-  _setup_npm
   _setup_pnpm
   _setup_ghq
   _setup_docker_and_docker_compose
