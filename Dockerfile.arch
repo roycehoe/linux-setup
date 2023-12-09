@@ -2,11 +2,9 @@
 
 FROM archlinux:base
 
-# Update system
-RUN pacman -Syu --noconfirm
-
-# Install essential packages
-RUN pacman -S --noconfirm sudo bash nano vim git curl
+# Update system and install essential packages
+RUN pacman -Syu --noconfirm \
+    && pacman -S --noconfirm sudo bash nano vim git curl
 
 # Create a new user and add to sudo group
 RUN useradd -m user \
