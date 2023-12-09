@@ -3,6 +3,10 @@ BASIC_PACKAGES=(
   "locales"
   "gcc"
   "make"
+  "patch"
+  "which"
+  "tree"
+  "man"
 )
 
 UI_PACKAGES=(
