@@ -49,16 +49,16 @@ function show_installation_banner() {
 }
 
 function show_plugin_banner() {
-  echo -e "${YELLOW}┌────────────────────────────────────────────────────┐"
+  show_notification_with_border $YELLOW ╔ ═ ╗
   echo -e "${YELLOW}│${NC} Installing${PURPLE} Plugin ${GREEN}"
   echo -e "${YELLOW}│${NC} ${CYAN}$1"
-  echo -e "${YELLOW}└────────────────────────────────────────────────────┘${NC}"
+  show_notification_with_border $YELLOW ╚ ═ ╝
 }
 
 function show_announcement_banner() {
-  echo -e "${WHITE}┌────────────────────────────────────────────────────┐"
+  show_notification_with_border $WHITE ╔ ═ ╗
   echo -e "${WHITE}│ ${YELLOW}$1"
-  echo -e "${WHITE}└────────────────────────────────────────────────────┘${NC}"
+  show_notification_with_border $WHITE ╚ ═ ╝
 }
 
 function install_package_with_banner() {
