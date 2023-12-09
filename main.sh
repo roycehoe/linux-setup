@@ -11,8 +11,8 @@
 . scripts/docker.sh
 
 setup_debian
-setup_fish
-setup_version_managers
-setup_docker
+setup_fish apt
+setup_version_managers apt
+setup_docker apt
 setup_nvim
 neofetch

@@ -15,12 +15,16 @@ function _setup_docker_apt_repository() {
 }
 
 function _install_docker_packages() {
+  local package_manager=$1
+
   for package in ${DOCKER_PACKAGES[@]}; do
-    install_package_with_banner apt $package
+    install_package_with_banner $package_manager $package
   done
 }
 
 function setup_docker() {
+  local package_manager=$1
+
   _setup_docker_apt_repository
-  _install_docker_packages
+  _install_docker_packages $package_manager
 }

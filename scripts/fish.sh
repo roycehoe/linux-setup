@@ -21,7 +21,9 @@ function configure_tide() {
 }
 
 function setup_fish() {
-  install_package_with_banner apt fish
+  local package_manager=$1
+
+  install_package_with_banner $package_manager fish
   change_default_shell_to_fish
   install_fisher
   install_tide
