@@ -10,8 +10,22 @@ PURPLE='\033[0;35m'       # Purple
 CYAN='\033[0;36m'         # Cyan
 WHITE='\033[0;37m'        # White
 
+function print_to_end_of_screen() {
+  local char=$1
+  local color=$2
+
+  cols=$(tput cols)
+  for ((i=0; i<cols; i++));
+    do printf "${color}${char}"; 
+  done; 
+  echo
+}
+
+
+
 function show_installation_banner() {
-  echo -e "${BLUE}=================================================================${NC}"
+  print_to_end_of_screen $BLUE
+  # echo -e "${BLUE}=================================================================${NC}"
   echo -e "${GREEN}┌────────────────────────────────────────────────────┐"
   echo -e "${GREEN}│${NC} Installing${YELLOW} Package ${GREEN}"
   echo -e "${GREEN}│${NC} ${CYAN}$1"
