@@ -1,8 +1,8 @@
 #!/bin/bash
-. ./setup_debian.sh
-. ./setup_fish.sh
-. ./setup_version_managers.sh
-. ./setup_nvim.sh
+. ./setup/setup_debian.sh
+. ./setup/setup_fish.sh
+. ./setup/setup_version_managers.sh
+. ./setup/setup_nvim.sh
 
 install_fonts() {
   mkdir -p ~/.local/share/fonts
