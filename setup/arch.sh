@@ -13,8 +13,8 @@ setup_arch() {
 
   setup_linux pacman
   setup_fish pacman
-  setup_version_managers pacman
-#   setup_docker pacman
+#   setup_version_managers pacman
+  setup_docker pacman
 #   setup_nvim
-#   neofetch
+  neofetch
 }
