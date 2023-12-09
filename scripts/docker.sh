@@ -18,7 +18,7 @@ function _install_docker_packages_debian() {
   local package_manager=$1
 
   _setup_docker_debian
-  for package in ${DOCKER_PACKAGES_UBUNTU[@]}; do
+  for package in ${DOCKER_PACKAGES_DEBIAN[@]}; do
     install_package_with_banner $package_manager $package
   done
 }

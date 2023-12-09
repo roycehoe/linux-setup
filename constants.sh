@@ -41,7 +41,7 @@ DOCKER_GPG_KEY_DEPENDENCIES=(
   "gnupg"
 )
 
-DOCKER_PACKAGES_UBUNTU=(
+DOCKER_PACKAGES_DEBIAN=(
   "docker-ce"
   "docker-ce-cli"
   "containerd.io"
