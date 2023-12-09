@@ -21,7 +21,7 @@ function configure_tide() {
 }
 
 function setup_fish() {
-  install_apt_package_with_banner fish
+  install_package_with_banner apt fish
   change_default_shell_to_fish
   install_fisher
   install_tide

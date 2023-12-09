@@ -29,15 +29,15 @@ function _set_locale() {
 function setup_debian() {
   _update_apt
   for package in ${BASIC_PACKAGES[@]}; do
-    install_apt_package_with_banner $package
+    install_package_with_banner apt $package
   done
 
   for package in ${UI_PACKAGES[@]}; do
-    install_apt_package_with_banner $package
+    install_package_with_banner apt $package
   done
 
   for package in ${WEB_DEV_PACKAGES[@]}; do
-    install_apt_package_with_banner $package
+    install_package_with_banner apt $package
   done
 
   _install_fonts

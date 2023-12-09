@@ -32,25 +32,15 @@ function show_announcement_banner() {
   echo -e "${WHITE}└────────────────────────────────────────────────────┘${NC}"
 }
 
-function _install_apt_package() {
-  sudo apt install -y $1
-}
-
-
-function install_apt_package_with_banner() {
-  show_installation_banner $1
-  _install_apt_package $1
-}
-
 function install_package_with_banner() {
-  local package=$1
-  local package_manager=$2
+  local package_manager=$1
+  local package=$2
 
   show_installation_banner $package
 
-  if [$package_manager == "apt"]
+  if [ $package_manager == "apt" ]; then
     sudo apt install -y $package
-  elif [$package_manager == "pacman"]
+  elif [ $package_manager == "pacman" ]; then
     sudo pacman -S $package
   else
     echo "Something went wrong with installing packages"

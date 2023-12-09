@@ -28,7 +28,7 @@ function _setup_go {
 
 function _setup_python() {
   for package in ${PYTHON_BUILD_DEPENDENCIES[@]}; do
-    install_apt_package_with_banner $package
+    install_package_with_banner apt $package
   done
   fish -c "asdf plugin add python"
   fish -c "asdf install python 3.9.0"
@@ -57,36 +57,9 @@ function _setup_asdf {
   _setup_go
 }
 
-function _setup_docker_apt_repository() {
-  for package in ${DOCKER_GPG_KEY_DEPENDENCIES[@]}; do
-    install_apt_package_with_banner $package
-  done
-  sudo install -m 0755 -d /etc/apt/keyrings
-  curl -fsSL https://download.docker.com/linux/debian/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
-  sudo chmod a+r /etc/apt/keyrings/docker.gpg
-
-  echo \
-  "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/debian \
-  $(. /etc/os-release && echo "$VERSION_CODENAME") stable" | \
-  sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
-  sudo apt-get update
-}
-
-function _install_docker_packages() {
-  for package in ${DOCKER_PACKAGES[@]}; do
-    install_apt_package_with_banner $package
-  done
-}
-
-function _setup_docker_and_docker_compose() {
-  _setup_docker_apt_repository
-  _install_docker_packages
-}
-
 function setup_version_managers() {
   _setup_asdf
   _setup_poetry
   _setup_pnpm
   _setup_ghq
-  _setup_docker_and_docker_compose
 }

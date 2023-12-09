@@ -8,9 +8,11 @@
 . scripts/fish.sh
 . scripts/version_managers.sh
 . scripts/nvim.sh
+. scripts/docker.sh
 
 setup_debian
 setup_fish
 setup_version_managers
+setup_docker
 setup_nvim
 neofetch

@@ -1,7 +1,6 @@
 #!/bin/bash
 
 _install_nvim() {
-  install_apt_package_with_banner wget
   mkdir -p $HOME/tools/ && cd $HOME/tools/
   
   show_installation_banner nvim
