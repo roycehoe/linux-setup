@@ -41,7 +41,7 @@ function install_package_with_banner() {
   if [ $package_manager == "apt" ]; then
     sudo apt install -y $package
   elif [ $package_manager == "pacman" ]; then
-    sudo pacman -S $package
+    sudo pacman -S --noconfirm $package
   else
     echo "Something went wrong with installing packages"
   fi

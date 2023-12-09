@@ -10,12 +10,6 @@ UI_PACKAGES=(
   "neofetch"
 )
 
-WEB_DEV_PACKAGES=(
-  "npm"
-)
-
-SHELL_PACKAGE="fish"
-
 PYTHON_BUILD_DEPENDENCIES=(
   "make"
   "build-essential"
