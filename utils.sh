@@ -16,21 +16,36 @@ function print_to_end_of_screen() {
 
   cols=$(tput cols)
   for ((i=0; i<cols; i++));
-    do printf "${color}${char}"; 
+    do printf "${color}${BOLD}${char}"; 
   done; 
-  echo
+  printf "${NC}"; 
+  echo -e
 }
 
 
+function show_notification_with_border() {
+  local color=$1
+  local start_border=$2
+  local filler=$3
+  local end_border=$4
+  cols=$(tput cols)-2
+
+  printf "${color}${start_border}"
+  for ((i=0; i<cols; i++));
+      do printf "${color}${filler}"; 
+  done;
+  printf "${color}${end_border}"
+  printf "${NC}"; 
+  echo -e
+}
 
 function show_installation_banner() {
-  print_to_end_of_screen $BLUE
-  # echo -e "${BLUE}=================================================================${NC}"
-  echo -e "${GREEN}┌────────────────────────────────────────────────────┐"
-  echo -e "${GREEN}│${NC} Installing${YELLOW} Package ${GREEN}"
-  echo -e "${GREEN}│${NC} ${CYAN}$1"
-  echo -e "${GREEN}└────────────────────────────────────────────────────┘${NC}"
-  echo -e "${BLUE}=================================================================${NC}"
+  print_to_end_of_screen - $BLUE
+  show_notification_with_border $GREEN ╔ ═ ╗
+  echo -e "${GREEN}${BOLD}║${NC} Installing${YELLOW} Package ${GREEN}"
+  echo -e "${GREEN}${BOLD}║${NC} ${CYAN}$1"
+  show_notification_with_border $GREEN ╚ ═ ╝
+  print_to_end_of_screen - $BLUE
 }
 
 function show_plugin_banner() {
