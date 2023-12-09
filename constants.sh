@@ -7,6 +7,9 @@ BASIC_PACKAGES=(
   "which"
   "tree"
   "man"
+  "xclip"
+  "traceroute"
+  "openvpn"
 )
 
 UI_PACKAGES=(
