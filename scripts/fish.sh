@@ -1,5 +1,5 @@
 #!/bin/bash
-. setup/utils.sh
+. utils.sh
 
 function change_default_shell_to_fish() {
   sudo chsh -s /usr/bin/fish

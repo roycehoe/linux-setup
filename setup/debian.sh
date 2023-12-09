@@ -1,6 +1,6 @@
 #!/bin/bash
-. setup/utils.sh
-. setup/constants.sh
+. utils.sh
+. constants.sh
 
 _install_fonts() {
   mkdir -p ~/.local/share/fonts

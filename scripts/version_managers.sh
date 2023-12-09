@@ -1,6 +1,6 @@
 #!/bin/bash
-. setup/utils.sh
-. setup/constants.sh
+. utils.sh
+. constants.sh
 
 function _download_asdf() {
   show_installation_banner asdf

@@ -36,6 +36,7 @@ function _install_apt_package() {
   sudo apt install -y $1
 }
 
+
 function install_apt_package_with_banner() {
   show_installation_banner $1
   _install_apt_package $1
