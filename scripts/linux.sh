@@ -2,7 +2,7 @@
 
 install_fonts() {
   mkdir -p ~/.local/share/fonts
-  cd ~/.local/share/fonts && curl -fLO https://github.com/ryanoasis/nerd-fonts/raw/HEAD/patched-fonts/JetBrainsMono/Ligatures/Medium/JetBrainsMonoNerdFontMono-Regular.ttf
+  cd ~/.local/share/fonts && { curl -fLO "https://github.com/ryanoasis/nerd-fonts/raw/HEAD/patched-fonts/JetBrainsMono/Ligatures/Medium/JetBrainsMonoNerdFontMono-Regular.ttf" ; cd - ; }
 }
 
 set_locale() {

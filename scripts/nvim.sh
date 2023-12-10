@@ -1,11 +1,13 @@
 #!/bin/bash
 
 _install_nvim() {
-  mkdir -p $HOME/tools/ && cd $HOME/tools/
+  mkdir -p $HOME/tools/
   
   show_installation_banner nvim
-  wget https://github.com/neovim/neovim/releases/download/nightly/nvim-linux64.tar.gz
-  tar zxvf nvim-linux64.tar.gz
+  wget -P $HOME/tools/ https://github.com/neovim/neovim/releases/download/nightly/nvim-linux64.tar.gz
+
+  tar zxvf $HOME/tools/nvim-linux64.tar.gz -C $HOME/tools/ 
+  # tar zxvf nvim-linux64.tar.gz -C
 }
 
 _set_nvim_to_path() {
@@ -17,7 +19,7 @@ _set_vim_alias_for_nvim() {
 }
 
 _install_nvim_plugins() {
-  cp -r ~/configs/nvim ~/.config
+  cp -r ./configs/nvim ~/.config
 }
 
 setup_nvim() {

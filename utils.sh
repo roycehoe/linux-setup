@@ -71,6 +71,8 @@ function install_package_with_banner() {
     sudo apt install -y $package
   elif [ $package_manager == "pacman" ]; then
     sudo pacman -S --noconfirm $package
+  elif [ $package_manager == "brew" ]; then
+    sudo brew install $package
   else
     echo "Something went wrong with installing packages"
   fi
