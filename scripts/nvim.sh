@@ -7,7 +7,6 @@ _install_nvim() {
   wget -P $HOME/tools/ https://github.com/neovim/neovim/releases/download/nightly/nvim-linux64.tar.gz
 
   tar zxvf $HOME/tools/nvim-linux64.tar.gz -C $HOME/tools/ 
-  # tar zxvf nvim-linux64.tar.gz -C
 }
 
 _set_nvim_to_path() {

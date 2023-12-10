@@ -2,6 +2,7 @@ BASIC_PACKAGES=(
   "sudo"
   "locales"
   "gcc"
+  "git"
   "make"
   "patch"
   "which"
