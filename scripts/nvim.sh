@@ -17,14 +17,12 @@ _set_vim_alias_for_nvim() {
 }
 
 _install_nvim_plugins() {
-  cd /home/user/.config
-  git clone https://github.com/roycehoe/nvim.git
+  cp -r ~/configs/nvim ~/.config
 }
 
 setup_nvim() {
   _install_nvim
   _set_nvim_to_path
   _set_vim_alias_for_nvim
-  cd ~/.config/nvim
   _install_nvim_plugins
 }

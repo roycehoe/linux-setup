@@ -31,6 +31,12 @@ install_linux_packages() {
   done
 }
 
+copy_over_configs() {
+  mkdir ~/.config
+
+  cp -r ~/configs/i3 ~/.config
+}
+
 setup_linux() {
     local package_manager=$1
 
