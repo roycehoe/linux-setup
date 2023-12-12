@@ -1,5 +1,10 @@
 BASIC_PACKAGES=(
   "sudo"
+  "bash"
+  "nano"
+  "vi"
+  "vim"
+  "curl"
   "locales"
   "gcc"
   "git"
@@ -8,6 +13,7 @@ BASIC_PACKAGES=(
   "which"
   "tree"
   "man"
+  "net-tools"
   "xclip"
   "traceroute"
   "openvpn"

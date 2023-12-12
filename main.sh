@@ -2,5 +2,5 @@
 . setup/debian.sh
 . setup/arch.sh
 
-setup_debian
-# setup_arch
+# setup_debian
+setup_arch
