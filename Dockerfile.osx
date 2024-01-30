@@ -1,0 +1,15 @@
+# syntax=docker/dockerfile:1
+
+FROM sickcodes/docker-osx:big-sur
+
+RUN sudo pacman -Syu --noconfirm \
+    && sudo pacman -S --noconfirm sudo bash nano vim git curl
+
+# RUN sudo useradd -m user \
+#     && echo "user:password" | sudo chpasswd \
+#     && sudo usermod -aG wheel user \
+#     && echo 'user ALL=(ALL) NOPASSWD: ALL' > sudo /etc/sudoers.d/user
+
+WORKDIR /home/user
+COPY . .
+CMD ["/bin/bash"]

@@ -1,4 +1,5 @@
 BASIC_PACKAGES=(
+  "git"
   "sudo"
   "bash"
   "nano"
@@ -7,7 +8,6 @@ BASIC_PACKAGES=(
   "curl"
   "locales"
   "gcc"
-  "git"
   "make"
   "patch"
   "which"
