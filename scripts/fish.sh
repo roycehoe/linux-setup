@@ -1,6 +1,14 @@
 #!/bin/bash
 . utils.sh
 
+function install_fish() {
+  if [ $package_manager == "apt" ]; then
+    sudo apt-add-repository ppa:fish-shell/release-3
+    sudo apt update
+  fi
+  install_package_with_banner $package_manager fish
+}
+
 function change_default_shell_to_fish() {
   sudo chsh -s /usr/bin/fish
 }
@@ -23,7 +31,7 @@ function configure_tide() {
 function setup_fish() {
   local package_manager=$1
 
-  install_package_with_banner $package_manager fish
+  install_fish
   change_default_shell_to_fish
   install_fisher
   install_tide
