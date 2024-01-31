@@ -1,12 +1,22 @@
 #!/bin/bash
 
 _install_nvim() {
-  mkdir -p $HOME/tools/
+  # mkdir -p $HOME/tools/
   
-  show_installation_banner nvim
-  wget -P $HOME/tools/ https://github.com/neovim/neovim/releases/download/nightly/nvim-linux64.tar.gz
+  # show_installation_banner nvim
+  # wget -P $HOME/tools/ https://github.com/neovim/neovim/releases/download/nightly/nvim-linux64.tar.gz
 
-  tar zxvf $HOME/tools/nvim-linux64.tar.gz -C $HOME/tools/ 
+  # tar zxvf $HOME/tools/nvim-linux64.tar.gz -C $HOME/tools/ 
+
+  curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage
+  chmod u+x nvim.appimage
+
+  ./nvim.appimage --appimage-extract
+  ./squashfs-root/AppRun --version
+
+  # Optional: exposing nvim globally.
+  sudo mv squashfs-root /
+  sudo ln -s /squashfs-root/AppRun /usr/bin/nvim
 }
 
 _set_nvim_to_path() {

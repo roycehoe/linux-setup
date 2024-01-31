@@ -3,6 +3,6 @@
 . setup/arch.sh
 . setup/osx.sh
 
-# setup_debian
-setup_arch
+setup_debian
+# setup_arch
 # setup_osx
