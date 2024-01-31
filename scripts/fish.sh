@@ -3,6 +3,7 @@
 
 function install_fish() {
   if [ $package_manager == "apt" ]; then
+    sudo apt-get install software-properties-common
     sudo apt-add-repository ppa:fish-shell/release-3
     sudo apt update
   fi

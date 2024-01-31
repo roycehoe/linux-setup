@@ -1,8 +1,12 @@
 #!/bin/bash
 
-docker rm $(docker ps -a -q  --filter ancestor="mydebianvm") \
-&& docker build -f Dockerfile.debian -t mydebianvm .\
-&& docker run -it --name mydebiancontainer mydebianvm
+docker rm $(docker ps -a -q  --filter ancestor="myubuntuvm") \
+&& docker build -f Dockerfile.ubuntu -t myubuntuvm .\
+&& docker run -it --name myubuntucontainer myubuntuvm
+
+# docker rm $(docker ps -a -q  --filter ancestor="mydebianvm") \
+# && docker build -f Dockerfile.debian -t mydebianvm .\
+# && docker run -it --name mydebiancontainer mydebianvm
 
 
 # docker rm $(docker ps -a -q  --filter ancestor="archvm") \
