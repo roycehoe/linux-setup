@@ -57,23 +57,74 @@ function _setup_ghq() {
   fish -c "go install github.com/x-motemen/ghq@latest"
 }
 
-function _setup_asdf {
-  local package_manager=$1
-
+function _setup_version_manager {
   _download_asdf
   _install_asdf
   _configure_completions
+}
+
+function _setup_runtime_env {
+  local package_manager=$1
+
   _setup_nodejs
   _setup_python $package_manager
   _setup_go
 }
 
-function setup_version_managers() {
+function _setup_runtime_package_manager {
   local package_manager=$1
 
-  _setup_asdf $package_manager
   _setup_poetry
   _setup_npm $package_manager
   _setup_pnpm
+}
+
+function _setup_project_manager {
   _setup_ghq
 }
+
+# function _setup_asdf {
+#   local package_manager=$1
+
+#   _download_asdf
+#   _install_asdf
+#   _configure_completions
+#   _setup_nodejs
+#   _setup_python $package_manager
+#   _setup_go
+# }
+
+# function setup_version_managers() {
+#   local package_manager=$1
+
+#   _setup_asdf $package_manager
+#   _setup_poetry
+#   _setup_npm $package_manager
+#   _setup_pnpm
+#   _setup_ghq
+# }
+
+function setup_version_managers() {
+  local package_manager=$1
+
+  _setup_version_manager
+  _setup_runtime_env $package_manager
+  _setup_runtime_package_manager $package_manager
+  _setup_project_manager
+}
+
+
+# function setup_tool_manager() {
+# }
+
+# function setup_tool_manager_plugins() {
+# }
+
+# function setup_programming_language_project_manager() {
+# }
+
+# function setup_repository_manager() {
+# }
+
+# function setup_programming_language_version_manager() {
+# }
