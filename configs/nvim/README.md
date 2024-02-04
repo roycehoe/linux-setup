@@ -1,3 +1,14 @@
+# Nvim Plugins
+
+- olimorris/onedarkpro.nvim - Color scheme for nvim
+- tpope/vim-fugitive - Git wrapper
+- VonHeikemen/lsp-zero.nvim - Manager for LSP services
+  - williamboman/mason.nvim - Manager for LSP servers, DAP serviers, linters and formatters
+  - hrsh7th/nvim-cmp - Autocompletion
+- ojroques/nvim-osc52 - Clipboard manager
+- nvim-telescope/telescope.nvim - File fuzzy finder
+- nvim-treesitter/nvim-treesitter - An interface to tree-sitter, a concrete syntax tree builder
+
 # Nvim shortcuts
 
 ## Normal mode
