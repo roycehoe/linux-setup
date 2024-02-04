@@ -17,5 +17,10 @@
 <leader>gs, vim.cmd.Git --[g]it [s]tatus
 <leader>u - [u]ndo tree
 
-vim.keymap.set("i", "<C-s>", vim.lsp.buf.signature_help) --[s]ignature
-vim.keymap.set("n", "<C-s>", vim.lsp.buf.signature_help) --[s]ignature
+<C-k> - Select previous autocomplete
+<C-j> - Select next autocomplete
+<Tab> - Confirm autocomplete
+
+<leader>pf - Search [p]roject [f]iles
+<leader>ps - Search [p]roject [s]tring search with grep
+<C-p> - Search [p]roject git files
