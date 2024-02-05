@@ -13,6 +13,7 @@
 
 ## Normal mode
 
+```
 <leader>pv - [p]roject [v]iew
 <leader>gs, vim.cmd.Git --[g]it [s]tatus
 <leader>u - [u]ndo tree
@@ -24,3 +25,4 @@
 <leader>pf - Search [p]roject [f]iles
 <leader>ps - Search [p]roject [s]tring search with grep
 <C-p> - Search [p]roject git files
+```
