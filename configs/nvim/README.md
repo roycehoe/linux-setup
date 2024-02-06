@@ -15,7 +15,6 @@
 
 ```
 <leader>pv - [p]roject [v]iew
-<leader>gs, vim.cmd.Git --[g]it [s]tatus
 <leader>u - [u]ndo tree
 
 <C-k> - Select previous autocomplete
@@ -25,4 +24,14 @@
 <leader>pf - Search [p]roject [f]iles
 <leader>ps - Search [p]roject [s]tring search with grep
 <C-p> - Search [p]roject git files
+```
+
+# Git
+```
+<leader>gs -[g]it [s]tatus
+s - [s]tage file
+u - [u]nstage file
+cc - [c]reate [c]ommit
+= - show unstaged changes
+
 ```
