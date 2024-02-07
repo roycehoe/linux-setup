@@ -6,3 +6,13 @@ vim.keymap.set("n", "<leader>u", vim.cmd.UndotreeToggle) --[g]et [s]tatus
 
 vim.keymap.set("i", "<C-s>", vim.lsp.buf.signature_help) --[s]ignature
 vim.keymap.set("n", "<C-s>", vim.lsp.buf.signature_help) --[s]ignature
+
+vim.keymap.set("n", "<C-e>", function() -- [e]xplore files with harpoon
+    require("harpoon.ui").toggle_quick_menu()
+    end
+)
+vim.keymap.set("n", "<leader>a", function() -- [a]dd files to harpoon
+	require("harpoon.mark").add_file()
+	end
+)
+
