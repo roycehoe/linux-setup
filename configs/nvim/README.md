@@ -24,6 +24,10 @@
 <leader>pf - Search [p]roject [f]iles
 <leader>ps - Search [p]roject [s]tring search with grep
 <C-p> - Search [p]roject git files
+
+<leader>a - [a]dd files to harpoon
+<C-e> - [e]xplore files with harpoon
+
 ```
 
 # Git
