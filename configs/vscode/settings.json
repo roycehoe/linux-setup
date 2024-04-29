@@ -1,68 +1,91 @@
 {
-  // Nik Tay configs
-  "editor.fontFamily": "JetBrainsMono NF",
-  "editor.fontSize": 11,
-  "editor.lineHeight": 19,
-  "python.linting.lintOnSave": true,
-  "terminal.integrated.fontSize": 12,
-  "zenMode.hideLineNumbers": false,
-  "zenMode.centerLayout": false,
-  "terminal.integrated.defaultProfile.linux": "fish",
-  "workbench.iconTheme": "Monokai Pro Icons",
   "remote.SSH.remotePlatform": {
     "192.168.119.131": "linux",
     "192.168.119.128": "linux",
     "socrates": "linux"
   },
-  "workbench.colorTheme": "One Dark Pro",
+  ////////////////////
+  // Editor Configs //
+  ////////////////////
+  "editor.fontFamily": "JetBrainsMono Nerd Font Medium",
+  "editor.fontSize": 11,
+  "editor.lineHeight": 19,
+  "editor.fontLigatures": true,
   "editor.quickSuggestions": {
     "strings": true
   },
   "editor.wordWrap": "on",
+  "editor.codeActionsOnSave": {
+    "source.sortImports": "explicit",
+    "source.organizeImports": "explicit"
+  },
+  "editor.minimap.enabled": false,
+  "editor.scrollBeyondLastLine": false, // recommended by neovim
+
+  "terminal.integrated.enableMultiLinePasteWarning": "never",
+  "files.autoSave": "afterDelay",
+  "git.openRepositoryInParentFolders": "never",
+
+  "zenMode.hideLineNumbers": false,
+  "zenMode.centerLayout": false,
+
+  "terminal.integrated.fontSize": 12,
+  "terminal.integrated.defaultProfile.linux": "fish",
+  "terminal.integrated.shellIntegration.enabled": false,
+
+  "workbench.iconTheme": "Monokai Pro Icons",
+  "workbench.colorTheme": "One Dark Pro",
   "workbench.startupEditor": "none",
-  "workbench.editor.untitled.hint": "hidden",
+  "workbench.editor.empty.hint": "hidden",
+
+  "files.exclude": {
+    "**/__pycache__": true,
+    "**/.venv": true
+  },
+  "window.zoomLevel": 1,
+
+  /////////////////////
+  // Project Configs //
+  /////////////////////
+  "python.analysis.autoImportCompletions": true,
+  "python.analysis.typeCheckingMode": "basic",
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "javascript.updateImportsOnFileMove.enabled": "always",
+
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.black-formatter",
+    "editor.formatOnSave": true,
+    "editor.formatOnType": true
+  },
   "[html]": {
     "editor.defaultFormatter": "vscode.html-language-features"
   },
   "[javascript]": {
-    "editor.defaultFormatter": "vscode.typescript-language-features"
+    "editor.defaultFormatter": "vscode.typescript-language-features",
+    "editor.tabSize": 2
   },
-  "[python]": {
-    "editor.defaultFormatter": "ms-python.python",
-    "editor.formatOnSave": true,
-    "editor.formatOnType": true
-  },
-  "python.analysis.autoImportCompletions": true,
-  // -- START Python linting rules
-  "python.formatting.provider": "black",
-  "editor.formatOnSave": true,
-  "python.linting.enabled": true,
-  "python.linting.flake8Args": [
-    "--extend-ignore=E203",
-    "max-line-length=88",
-    "--ignore=E501"
-  ],
-  // --END Python linting rules
-  "terminal.integrated.enableMultiLinePasteWarning": false,
   "[typescriptreact]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.tabSize": 2
   },
   "[json]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.tabSize": 2
   },
   "[jsonc]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.tabSize": 2
   },
-  // Royce configs
-  // "editor.codeActionsOnSave": {
-  //   "source.sortImports": true
-  // },
   "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.tabSize": 2
+  },
+  "[vue]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "window.zoomLevel": 1,
-  "javascript.updateImportsOnFileMove.enabled": "always",
-  // -- START vim configs
+  /////////////////
+  // VIM CONFIGS //
+  /////////////////
   "vim.normalModeKeyBindingsNonRecursive": [
     {
       "before": ["u"],
@@ -82,6 +105,9 @@
         }
       ]
     }
-  ]
-  // -- END vim configs
+  ],
+  "vim.easymotion": true,
+  "vim.incsearch": true,
+  "vim.useCtrlKeys": true,
+  "vim.leader": " "
 }
