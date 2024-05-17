@@ -1,0 +1,37 @@
+{
+  "editor.formatOnSave": true,
+  "editor.fontFamily": "JetBrainsMono Nerd Font",
+  "editor.fontSize": 11,
+  "editor.lineHeight": 19,
+  "editor.fontLigatures": true,
+  "terminal.integrated.fontSize": 12,
+  "zenMode.hideLineNumbers": false,
+  "zenMode.centerLayout": false,
+  "terminal.integrated.defaultProfile.linux": "fish",
+  "workbench.iconTheme": "Monokai Pro Icons",
+  "workbench.colorTheme": "One Dark Pro",
+  "editor.quickSuggestions": {
+    "strings": true
+  },
+  "editor.wordWrap": "on",
+  "workbench.startupEditor": "none",
+  "[html]": {
+    "editor.defaultFormatter": "vscode.html-language-features"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  },
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.black-formatter",
+    "editor.formatOnSave": true
+  },
+  "terminal.integrated.enableMultiLinePasteWarning": false,
+  "window.zoomLevel": 1,
+  "remote.portsAttributes": {
+    "8000": {
+      "protocol": "https"
+    }
+  },
+  "workbench.editor.empty.hint": "hidden",
+  "terminal.integrated.shellIntegration.enabled": false
+}
