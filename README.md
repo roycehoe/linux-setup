@@ -27,6 +27,7 @@ Provisioning scripts when setting up a new workstation
 - Chat applications [Telegram, Jira etc.]
 - yabai
 - skhd
+- jankyborders (Yabai borders)
 
 ## Downloaded Software Configuration
 - Configure iTerm2 to Nord theme
