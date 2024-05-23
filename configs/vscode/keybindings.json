@@ -1,0 +1,115 @@
+// Place your key bindings in this file to override the defaults
+[
+    /////////////////////////
+    // CHANGE FOCUS GROUP  //
+    /////////////////////////
+    {
+        "key": "ctrl+h",
+        "command": "workbench.action.focusLeftGroup",
+        "when": "editorTextFocus && vim.active && vim.mode != 'Insert'"
+    },
+    {
+        "key": "ctrl+l",
+        "command": "workbench.action.focusRightGroup",
+        "when": "editorTextFocus && vim.active && vim.mode != 'Insert'"
+    },
+    {
+        "key": "ctrl+k",
+        "command": "workbench.action.focusAboveGroup",
+        "when": "editorTextFocus && vim.active && vim.mode != 'Insert'"
+    },
+    {
+        "key": "ctrl+j",
+        "command": "workbench.action.focusBelowGroup",
+        "when": "editorTextFocus && vim.active && vim.mode != 'Insert'"
+    },
+    //////////////////////
+    // CHANGE FOCUS TAB //
+    //////////////////////
+    {
+        "key": "cmd+l",
+        "command": "workbench.action.nextEditor"
+    },
+    {
+        "key": "cmd+h",
+        "command": "workbench.action.previousEditor"
+    },
+    /////////////////////////
+    // NAVIGATE SUGGESTIONS//
+    /////////////////////////
+    {
+        "key": "ctrl+j",
+        "command": "selectNextSuggestion",
+        "when": "suggestWidgetVisible"
+    },
+    {
+        "key": "ctrl+k",
+        "command": "selectPrevSuggestion",
+        "when": "suggestWidgetVisible"
+    },
+    {
+        "key": "ctrl+j",
+        "command": "workbench.action.quickOpenSelectNext",
+        "when": "inQuickOpen"
+    },
+    {
+        "key": "ctrl+k",
+        "command": "workbench.action.quickOpenSelectPrevious",
+        "when": "inQuickOpen"
+    },
+    ///////////////
+    // FILE TREE //
+    ///////////////
+    {
+        // Focus on File Explorer when text editor is focused
+        "key": "cmd+shift+b",
+        "command": "workbench.files.action.focusFilesExplorer"
+    },
+    {
+        // Focus on active text editor group when File Explorer is focused
+        "key": "cmd+shift+b",
+        "command": "workbench.action.focusActiveEditorGroup",
+        "when": "explorerViewletVisible && filesExplorerFocus"
+    },
+    {
+        // Focus on File Explorer when text editor is focused
+        "key": "cmd+b",
+        "command": "workbench.action.toggleSidebarVisibility"
+    },
+    {
+        // Open selected file in the first (left) editor group from File Explorer
+        "key": "ctrl+shift+1",
+        "command": "explorer.openToSide",
+        "args": { "group": 0 },
+        "when": "explorerViewletVisible && filesExplorerFocus && !inputFocus"
+    },
+    {
+        // Open selected file in the second (right) editor group from File Explorer
+        "key": "ctrl+shift+2",
+        "command": "explorer.openToSide",
+        "args": { "group": 1 },
+        "when": "explorerViewletVisible && filesExplorerFocus && !inputFocus"
+    },
+    {
+        "key": "ctrl+shift+2",
+        "command": "explorer.openToSide",
+        "args": { "group": 1 },
+        "when": "explorerViewletVisible && filesExplorerFocus && !inputFocus"
+    },
+    //////////////////
+    // CODE FOLDING //
+    //////////////////
+    {
+        "key": "cmd+shift+h",
+        "command": "editor.fold"
+    },
+    {
+        "key": "cmd+shift+l",
+        "command": "editor.unfold"
+    },
+    {
+        "key": "ctrl+p",
+        "command": "-extension.vim_ctrl+p",
+        "when": "editorTextFocus && vim.active && vim.use<C-p> && !inDebugRepl || vim.active && vim.use<C-p> && !inDebugRepl && vim.mode == 'CommandlineInProgress' || vim.active && vim.use<C-p> && !inDebugRepl && vim.mode == 'SearchInProgressMode'"
+    }
+]
